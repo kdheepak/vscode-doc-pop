@@ -16,6 +16,7 @@ class DocumentationHoverProvider implements vscode.HoverProvider {
 
       if (!docsFilePath) {
         resolve(null);
+        return;
       }
 
       try {
@@ -47,10 +48,7 @@ class DocumentationHoverProvider implements vscode.HoverProvider {
 
 export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
-    vscode.languages.registerHoverProvider(
-      { scheme: "file", language: "your-target-language" },
-      new DocumentationHoverProvider(),
-    ),
+    vscode.languages.registerHoverProvider({ scheme: "file" }, new DocumentationHoverProvider()),
   );
 }
 

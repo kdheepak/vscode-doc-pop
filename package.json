@@ -1,7 +1,11 @@
 {
   "name": "docpop",
   "displayName": "DocPop",
-  "description": "Access custom local documentation by simply hovering over code elements in Visual Studio Code. ",
+  "description": "Access custom local documentation by simply hovering over code elements in Visual Studio Code.",
+  "repository": {
+    "url": "https://github.com/kdheepak/vscode-doc-pop"
+  },
+  "license": "MIT",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.77.0"
