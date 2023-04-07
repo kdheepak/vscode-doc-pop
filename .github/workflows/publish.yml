@@ -27,8 +27,8 @@ jobs:
       - run: npm ci
       - run: npm install -g vsce
       - run: vsce package
-      - name: Set VSIX_FILE path
-        run: echo "::set-env name=VSIX_FILE::$(ls *.vsix)"
+      - name: Set VSIX_FILE environment variable
+        run: echo "VSIX_FILE=$(ls *.vsix)" >> $GITHUB_ENV
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ env.VSIX_FILE }}
